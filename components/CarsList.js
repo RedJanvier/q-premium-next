@@ -28,14 +28,27 @@ const CarsList = ({ cars }) => {
                 )}
                 {car.force && (
                   <li>
-                    Potenza: <span>{car.force}</span>
+                    Potenza: <span>{car.force.cv}</span> cv |{' '}
+                    <span>{car.force.kw}</span> kw
                   </li>
                 )}
                 {car.volume && (
-                  <li>
-                    Cilindrata:{' '}
-                    <span>
-                      {car.volume} cm<span style={{ fontSize: '12px' }}>3</span>
+                  <li
+                    style={{
+                      display: 'flex',
+                      justifyContent: 'space-between',
+                      maxWidth: '150px',
+                    }}
+                  >
+                    Cilindrata: <span>{car.volume}</span> cm
+                    <span
+                      style={{
+                        fontSize: '10px',
+                        alignSelf: 'flex-start',
+                        fontWeight: 'light',
+                      }}
+                    >
+                      3
                     </span>
                   </li>
                 )}
@@ -76,6 +89,19 @@ const CarsList = ({ cars }) => {
                   {cost.value} <span>€x100km {cost.extra && cost.extra}</span>
                 </h3>
                 <ul>
+                  <span
+                    style={{
+                      width: 100 * cost.rating + '%',
+                      borderColor:
+                        car.fuel === 'BENZINA'
+                          ? '#E20000'
+                          : car.fuel.includes('HYBRID')
+                          ? '#009933'
+                          : car.fuel === 'ELECTRICA'
+                          ? '#009EE3'
+                          : '#005999',
+                    }}
+                  ></span>
                   <li
                     style={{
                       color:

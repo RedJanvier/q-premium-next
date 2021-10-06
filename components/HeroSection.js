@@ -13,8 +13,8 @@ const HeroSection = ({ ctaData, openModal }) => {
           </span>
         </h1>
         <p>
-          I costi chilometrici relativi alle auto provate dal 2016 ad oggi.
-          <a href='#'>Più informazioni</a>
+          I costi chilometrici relativi alle auto provate dal 2016 ad oggi.{' '}
+          <a href='#'>Più info</a>
         </p>
         <div className='date'>
           <span className='date__icon'>
@@ -24,7 +24,10 @@ const HeroSection = ({ ctaData, openModal }) => {
         </div>
       </div>
       <div className='hero__cta'>
-        <h2>Costi calcolati su queste percentuali di utilizzo</h2>
+        <h2>
+          <span>Costi calcolati</span>
+          <span> su queste percentuali di utilizzo</span>
+        </h2>
         <div className='cta-cards'>
           {ctaData.map((data) => (
             <div

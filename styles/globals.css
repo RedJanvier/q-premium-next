@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;300;400;500;700;900&display=swap');
+
 * {
   padding: 0;
   margin: 0;
+  line-height: 0.9;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: 'Work Sans', sans-serif;
 }
 
 :root {
@@ -11,6 +14,7 @@
 
 a {
   color: var(--primary-color);
+  font-weight: bold;
 }
 
 ul {
@@ -35,7 +39,7 @@ body {
 .navbar-content {
   display: flex;
   justify-content: space-between;
-  width: 80%;
+  width: 90%;
   max-width: 1280px;
   margin: 0 auto;
   align-items: center;
@@ -45,18 +49,20 @@ body {
   display: flex;
   align-items: center;
   color: #adadad;
+  font-size: 18px;
 }
 
 .menu__icon {
-  font-size: 40px;
   margin-left: 1rem;
 }
+
 .menu__text {
   display: none;
+  font-weight: light;
   text-transform: uppercase;
 }
 
-@media screen and (min-width: 580px) {
+@media screen and (min-width: 630px) {
   .menu__text {
     display: block;
   }
@@ -70,15 +76,15 @@ body {
 .container {
   margin: 10px auto 0 auto;
   max-width: 1280px;
-  width: 80%;
+  width: 90%;
 }
 
 .hero .container {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 80%;
-  margin-top: 100px;
+  width: 90%;
+  margin-top: 90px;
 }
 
 .hero__higlight {
@@ -99,32 +105,33 @@ body {
 }
 
 .hero__higlight p {
-  margin: 1rem 0;
+  margin: 0.8rem 0;
 }
 
 h1 {
   display: flex;
   align-items: center;
-  font-weight: lighter;
+  font-weight: 100;
   font-size: 40px;
   color: var(--primary-color);
+  margin-right: 6px;
 }
 
 .kilometers {
-  font-size: 0.5em;
-  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 0.9;
+  font-weight: 100;
 }
 
 .cta-cards {
   display: flex;
   justify-content: center;
-  max-width: calc(65px * 3);
-  margin: 2rem auto;
+  margin: 1.2rem auto;
 }
 
 .cta-card {
   position: relative;
-  padding: 0.6rem 0.2rem;
+  padding: 0.4rem 0.2rem;
   min-width: 7rem;
   background-color: #fff;
   border-radius: 10px;
@@ -137,18 +144,20 @@ h1 {
   font-size: 2rem;
   justify-content: center;
   align-items: flex-start;
+  margin-bottom: 0.5rem;
 }
 
 .cta-card span {
-  color: #666;
-  font-weight: bold;
+  color: #333333;
+  font-size: 16px;
   text-transform: uppercase;
-  margin-top: 1rem;
+  font-weight: 500;
 }
 
 .cta-card h3 span {
-  color: #ccc;
-  font-size: 16px;
+  color: #c1c1c1;
+  font-size: 14px;
+  font-weight: light;
   margin-top: 5px;
 }
 
@@ -171,26 +180,28 @@ h1 {
   border: none;
   outline: none;
   margin: 1rem 0;
+  margin-top: 1.5rem;
   font-size: 20px;
-  padding: 1rem 8rem;
+  padding: 1.5rem 9rem;
   color: var(--primary-color);
   appearance: none;
   background-color: #fff;
   border-radius: 10px;
 }
 
-.date__icon {
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
-  color: #11111177;
-  background-color: #cccccc77;
-  padding: 0.8rem;
-  margin-right: 0.5rem;
+.date {
+  color: #333333;
+  display: flex;
+  align-items: center;
 }
 
-.date__text {
-  color: #00000077;
+.date__icon {
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  background-color: #c1c1c180;
+  padding: 0.8rem;
+  margin-right: 0.5rem;
 }
 
 @media screen and (max-width: 630px) {
@@ -200,14 +211,22 @@ h1 {
     width: 100%;
   }
 
+  .container {
+    margin: 0 auto;
+  }
+
+  .menu {
+    font-size: 34px;
+  }
+
   .hero__higlight {
-    margin-top: 1rem;
     flex-direction: row;
-    padding: 0 1rem;
+    padding: 0 0.5rem;
   }
 
   .hero__higlight p {
-    margin-left: 1rem;
+    color: #525252;
+    font-weight: 400;
   }
 
   .hero .date {
@@ -219,7 +238,8 @@ h1 {
   display: flex;
   gap: 1rem;
   padding: 1rem 0;
-  border-top: 3px solid #11111177;
+  border-top: 3px solid #eeeeee;
+  color: #333333;
 }
 
 .car__description {
@@ -227,7 +247,7 @@ h1 {
 }
 
 .car__description h2 span {
-  font-weight: 200;
+  font-weight: 500;
 }
 
 .car__description span {
@@ -252,15 +272,28 @@ h1 {
   justify-content: space-between;
   align-items: center;
   margin: 1rem 0;
+  font-weight: light;
+}
+
+.car__specs ul span {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  border-bottom: 4px solid;
+  border-bottom-color: inherit;
 }
 
 .car__specs ul {
+  margin-top: 0.4rem;
   display: flex;
+  position: relative;
+  background-color: #eee;
+  z-index: 0;
 }
 
 .car__specs ul li {
+  z-index: 2;
   padding: 2px 1.6rem;
-  border-bottom: 5px solid #ccc;
   border-right: 5px solid white;
 }
 
@@ -270,8 +303,8 @@ h1 {
 
 .car__specs span {
   color: #11111177;
-  font-size: 16px;
-  font-weight: 100;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .car__specs {
@@ -339,18 +372,25 @@ h1 {
     display: none;
   }
   .cta-card {
-    padding: 0.6em 0.2em;
-    min-width: 7em;
     margin: 0 0.4rem;
   }
 
   .cta-card::after {
-    width: 107%;
+    width: 105%;
     border-top-width: 0.7rem;
   }
 
   .hero__cta {
-    font-size: 14px;
+    font-size: 16px;
+  }
+
+  .hero__cta h2 {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500 !important;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #333333;
   }
 
   .hero__cta button {
@@ -536,7 +576,9 @@ main.container {
 
   .modal {
     padding: 2rem 0;
+    height: 90vh;
   }
+
   .logo {
     position: relative;
   }
@@ -546,7 +588,7 @@ main.container {
     width: 100%;
     border-top: 20px solid var(--primary-color);
     position: absolute;
-    top: -1.4rem;
+    top: -1.6rem;
     left: -34%;
     z-index: 4;
   }
@@ -580,7 +622,7 @@ main.container {
   outline: none;
   background: #eee;
   border-radius: 10px;
-  margin: 2rem 0;
+  margin: 1rem 0;
   padding: 1rem;
   padding-left: 6rem;
 }
@@ -591,8 +633,9 @@ main.container {
 
 .mobile-order .select span {
   position: absolute;
-  top: 3rem;
-  left: 1rem;
+  color: #333333;
+  top: 2.06rem;
+  left: 0.8rem;
 }
 
 .mobile__filter {
@@ -609,15 +652,81 @@ main.container {
   text-align: center;
 }
 
+/* FROM ISSA */
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.socials {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  margin: 1rem auto;
+}
+
+.socials a {
+  color: rgb(223, 223, 223);
+  font-size: 1.4rem;
+}
+
+.each-li {
+  margin: 0 0.3rem;
+}
+
 .footer {
-  background-color: #333333;
+  padding: 2rem 1rem 4rem 1rem;
+  background-color: rgb(52, 52, 53);
+  color: white;
 }
 
 .footer h2 {
-  font-size: 17px;
   font-weight: bold;
-  padding: 1rem;
-  text-transform: uppercase;
-  text-align: center;
-  color: #fff;
+}
+
+.appendix {
+  color: rgb(150, 149, 149);
+  font-size: 0.8rem;
+  padding: 0 1rem;
+  padding-top: 1rem;
+}
+
+.appendix.text-center {
+  border-top: 1px solid;
+}
+
+.mobOnly {
+  background: white;
+  padding: 1rem 1rem 0 1rem;
+}
+
+@media screen and (max-width: 480px) {
+  .flexDirection {
+    flex-direction: column;
+  }
+
+  .left {
+    background: white;
+  }
+
+  .whiteCard {
+    margin: 1rem 0.3rem;
+  }
+
+  .bottomNav {
+    display: flex;
+    background: #ff5d27;
+    color: white;
+    font-size: 1.2rem;
+    position: fixed;
+    font-weight: bolder;
+    text-align: center;
+    bottom: 0;
+    align-items: center;
+    justify-content: left;
+    width: 100%;
+    padding: 1rem;
+  }
 }

@@ -6,7 +6,8 @@ import Navbar from '../components/navbar';
 import Sidebar from '../components/Sidebar';
 import CostModal from '../components/CostModal';
 import { FaExternalLinkAlt } from 'react-icons/fa';
-import Filter from '../components/icons/Filter';
+import { RiEqualizerFill } from 'react-icons/ri';
+import Footer from '../components/Footer';
 
 export default function Home() {
   const [showModal, setShowModal] = useState(false);
@@ -32,9 +33,12 @@ export default function Home() {
   const carsData = [
     {
       name: 'VOLKSWAGEN ECO UP!',
-      model: 'move 5 porte',
+      model: 'move 5p.',
       type: 'Berlina',
-      force: '150CV | 110kW',
+      force: {
+        cv: 150,
+        kw: 110,
+      },
       volume: '1395',
       image: 'https://preview2.netcarshow.com/Volkswagen-Eco_Up-2013-hd.jpg',
       fuel: 'GPL',
@@ -42,6 +46,7 @@ export default function Home() {
         {
           value: '3,85',
           extra: 'per le tue abitudini',
+          rating: 0.1,
         },
       ],
     },
@@ -49,50 +54,63 @@ export default function Home() {
       name: 'FORD FIESTA',
       model: '1.1 75 CV Gpl 5p.',
       type: 'Berlina',
-      force: '150CV | 110kW',
+      force: {
+        cv: 150,
+        kw: 110,
+      },
       volume: '1395',
       image:
         'https://www.topgear.com/sites/default/files/cars-car/image/2018/05/ford_2018_fiesta_st_3door_02.jpg',
       fuel: 'GPL',
-      costs: [{ value: '4,96' }],
+      costs: [{ value: '4,96', rating: 0.15 }],
     },
     {
       name: 'HYUNDAY IONIQ',
       model: 'ELECTRIC EV 38.3 kWhA',
       type: 'Berlina',
-      force: '150CV | 110kW',
+      force: {
+        cv: 150,
+        kw: 110,
+      },
       image:
         'https://media.ed.edmunds-media.com/hyundai/ioniq-electric/2020/oem/2020_hyundai_ioniq-electric_4dr-hatchback_limited_fq_oem_1_1600.jpg',
       fuel: 'ELECTRICA',
       costs: [
-        { value: '3,40', extra: '- ricarica domestica' },
-        { value: '8,54', extra: '- col. corrente continua' },
+        { value: '3,40', extra: '- ricarica domestica', rating: 0.1 },
+        { value: '8,54', extra: '- col. corrente continua', rating: 0.3 },
       ],
     },
     {
       name: 'TOYOTA PRIUS',
       model: 'Plug-in Hybrid',
       type: 'Berlina',
-      force: '150CV | 110kW',
+      force: {
+        cv: 150,
+        kw: 110,
+      },
       image:
         'https://i.gaw.to/content/photos/38/92/389207_2020_Toyota_Prius.jpg?1024x640',
       fuel: 'PLUG-IN HYBRID',
       costs: [
-        { value: '3,40', extra: 'ricarica domestica' },
-        { value: '8,54', extra: 'col. cor. continua' },
+        { value: '3,40', extra: 'ricarica domestica', rating: 0.15 },
+        { value: '8,54', extra: 'col. cor. continua', rating: 0.18 },
       ],
     },
     {
       name: 'VOLKSWAGEN ECO UP!',
       model: 'move 5 porte',
       type: 'Berlina',
-      force: '150CV | 110kW',
+      force: {
+        cv: 150,
+        kw: 110,
+      },
       volume: '1395',
       image: 'https://preview2.netcarshow.com/Volkswagen-Eco_Up-2013-hd.jpg',
       fuel: 'FULL HYBRID',
       costs: [
         {
           value: '6,97',
+          rating: 0.1,
         },
       ],
     },
@@ -100,13 +118,17 @@ export default function Home() {
       name: 'VOLKSWAGEN ECO UP!',
       model: 'move 5 porte',
       type: 'Berlina',
-      force: '150CV | 110kW',
+      force: {
+        cv: 150,
+        kw: 110,
+      },
       volume: '1395',
       image: 'https://preview2.netcarshow.com/Volkswagen-Eco_Up-2013-hd.jpg',
       fuel: 'BENZINA',
       costs: [
         {
           value: '8,54',
+          rating: 0.1,
         },
       ],
     },
@@ -212,10 +234,10 @@ export default function Home() {
           </div>
           <div className='mobile-order'>
             <div className='date'>
-              <span className='date__icon'>
+              <div className='date__icon'>
                 <FaExternalLinkAlt />
-              </span>
-              <span className='date__text'>Info Prezzi</span>
+              </div>
+              <p className='date__text'>Info Prezzi</p>
             </div>
             <div className='select'>
               <span>Ordina per </span>
@@ -237,11 +259,10 @@ export default function Home() {
         <CostModal closeModal={() => setShowModal(false)} ctaData={ctaData} />
       )}
 
-      <footer className='footer'>
-        <h2>Quattroruote</h2>
-      </footer>
+      <Footer />
       <div className='mobile__filter'>
-        <Filter color='white' size={34} />
+        <RiEqualizerFill />
+        {/* <Filter color='white' size={34} /> */}
         <h2>Filtra auto</h2>
       </div>
     </>

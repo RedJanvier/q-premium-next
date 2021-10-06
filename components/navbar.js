@@ -9,15 +9,13 @@ const Navbar = () => {
           <Image
             src='/logo2.png'
             alt='q-premium-logo'
-            width={195}
-            height={72}
+            width={175}
+            height={55}
           />
         </div>
         <div className='menu'>
           <span className='menu__text'>Menu</span>
-          <span className='menu__icon'>
-            <FaBars />
-          </span>
+          <FaBars className='menu__icon' />
         </div>
       </div>
     </div>
