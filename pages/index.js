@@ -1,13 +1,12 @@
 import Head from 'next/head';
-import Image from 'next/image';
 import { useState } from 'react';
 import CarsList from '../components/CarsList';
 import HeroSection from '../components/HeroSection';
 import Navbar from '../components/navbar';
 import Sidebar from '../components/Sidebar';
-import styles from '../styles/Home.module.css';
 import CostModal from '../components/CostModal';
 import { FaExternalLinkAlt } from 'react-icons/fa';
+import Filter from '../components/icons/Filter';
 
 export default function Home() {
   const [showModal, setShowModal] = useState(false);
@@ -52,7 +51,8 @@ export default function Home() {
       type: 'Berlina',
       force: '150CV | 110kW',
       volume: '1395',
-      image: 'https://preview2.netcarshow.com/Volkswagen-Eco_Up-2013-hd.jpg',
+      image:
+        'https://www.topgear.com/sites/default/files/cars-car/image/2018/05/ford_2018_fiesta_st_3door_02.jpg',
       fuel: 'GPL',
       costs: [{ value: '4,96' }],
     },
@@ -61,7 +61,8 @@ export default function Home() {
       model: 'ELECTRIC EV 38.3 kWhA',
       type: 'Berlina',
       force: '150CV | 110kW',
-      image: 'https://preview2.netcarshow.com/Volkswagen-Eco_Up-2013-hd.jpg',
+      image:
+        'https://media.ed.edmunds-media.com/hyundai/ioniq-electric/2020/oem/2020_hyundai_ioniq-electric_4dr-hatchback_limited_fq_oem_1_1600.jpg',
       fuel: 'ELECTRICA',
       costs: [
         { value: '3,40', extra: '- ricarica domestica' },
@@ -73,11 +74,40 @@ export default function Home() {
       model: 'Plug-in Hybrid',
       type: 'Berlina',
       force: '150CV | 110kW',
-      image: 'https://preview2.netcarshow.com/Volkswagen-Eco_Up-2013-hd.jpg',
+      image:
+        'https://i.gaw.to/content/photos/38/92/389207_2020_Toyota_Prius.jpg?1024x640',
       fuel: 'PLUG-IN HYBRID',
       costs: [
         { value: '3,40', extra: 'ricarica domestica' },
         { value: '8,54', extra: 'col. cor. continua' },
+      ],
+    },
+    {
+      name: 'VOLKSWAGEN ECO UP!',
+      model: 'move 5 porte',
+      type: 'Berlina',
+      force: '150CV | 110kW',
+      volume: '1395',
+      image: 'https://preview2.netcarshow.com/Volkswagen-Eco_Up-2013-hd.jpg',
+      fuel: 'FULL HYBRID',
+      costs: [
+        {
+          value: '6,97',
+        },
+      ],
+    },
+    {
+      name: 'VOLKSWAGEN ECO UP!',
+      model: 'move 5 porte',
+      type: 'Berlina',
+      force: '150CV | 110kW',
+      volume: '1395',
+      image: 'https://preview2.netcarshow.com/Volkswagen-Eco_Up-2013-hd.jpg',
+      fuel: 'BENZINA',
+      costs: [
+        {
+          value: '8,54',
+        },
       ],
     },
   ];
@@ -207,18 +237,13 @@ export default function Home() {
         <CostModal closeModal={() => setShowModal(false)} ctaData={ctaData} />
       )}
 
-      <footer className={styles.footer}>
-        <a
-          href='https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src='/vercel.svg' alt='Vercel Logo' width={72} height={16} />
-          </span>
-        </a>
+      <footer className='footer'>
+        <h2>Quattroruote</h2>
       </footer>
+      <div className='mobile__filter'>
+        <Filter color='white' size={34} />
+        <h2>Filtra auto</h2>
+      </div>
     </>
   );
 }

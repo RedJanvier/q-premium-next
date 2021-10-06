@@ -33,7 +33,10 @@ const CarsList = ({ cars }) => {
                 )}
                 {car.volume && (
                   <li>
-                    Cilindrata: <span>{car.volume}</span>
+                    Cilindrata:{' '}
+                    <span>
+                      {car.volume} cm<span style={{ fontSize: '12px' }}>3</span>
+                    </span>
                   </li>
                 )}
               </ul>

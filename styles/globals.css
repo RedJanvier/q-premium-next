@@ -297,7 +297,7 @@ h1 {
 .car__image {
   width: 100%;
   min-width: 100px;
-  max-width: 300px;
+  max-width: 500px;
 }
 
 .car__image > div {
@@ -537,6 +537,19 @@ main.container {
   .modal {
     padding: 2rem 0;
   }
+  .logo {
+    position: relative;
+  }
+
+  .logo::before {
+    content: '';
+    width: 100%;
+    border-top: 20px solid var(--primary-color);
+    position: absolute;
+    top: -1.4rem;
+    left: -34%;
+    z-index: 4;
+  }
 }
 
 .order {
@@ -580,4 +593,31 @@ main.container {
   position: absolute;
   top: 3rem;
   left: 1rem;
+}
+
+.mobile__filter {
+  display: flex;
+  padding: 1rem;
+  background-color: var(--primary-color);
+  color: white;
+  position: sticky;
+  bottom: 0;
+}
+
+.mobile__filter h2 {
+  flex: 1;
+  text-align: center;
+}
+
+.footer {
+  background-color: #333333;
+}
+
+.footer h2 {
+  font-size: 17px;
+  font-weight: bold;
+  padding: 1rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
 }
