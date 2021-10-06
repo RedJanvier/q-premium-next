@@ -28,8 +28,8 @@ const CarsList = ({ cars }) => {
                 )}
                 {car.force && (
                   <li>
-                    Potenza: <span>{car.force.cv}</span> cv |{' '}
-                    <span>{car.force.kw}</span> kw
+                    Potenza: <span>{car.force.cv}</span> CV |{' '}
+                    <span>{car.force.kw}</span> KW
                   </li>
                 )}
                 {car.volume && (

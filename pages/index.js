@@ -40,7 +40,7 @@ export default function Home() {
         kw: 110,
       },
       volume: '1395',
-      image: 'https://preview2.netcarshow.com/Volkswagen-Eco_Up-2013-hd.jpg',
+      image: 'https://preview2.netcarshow.com/Volkswagen-Up-2013-1600-04.jpg',
       fuel: 'GPL',
       costs: [
         {
@@ -60,7 +60,7 @@ export default function Home() {
       },
       volume: '1395',
       image:
-        'https://www.topgear.com/sites/default/files/cars-car/image/2018/05/ford_2018_fiesta_st_3door_02.jpg',
+        'https://assets.whichcar.com.au/image/upload/s--DXPbYATM--/ar_2.304921968787515,c_fill,f_auto,q_auto:good/v1/archive/whichcar/2018/05/16/-1/ford-fiesta-st-traking.jpg',
       fuel: 'GPL',
       costs: [{ value: '4,96', rating: 0.15 }],
     },
@@ -73,7 +73,7 @@ export default function Home() {
         kw: 110,
       },
       image:
-        'https://media.ed.edmunds-media.com/hyundai/ioniq-electric/2020/oem/2020_hyundai_ioniq-electric_4dr-hatchback_limited_fq_oem_1_1600.jpg',
+        'https://www.topgear.com/sites/default/files/cars-car/image/2019/09/hyundai-new-ioniq-electric-02.jpg',
       fuel: 'ELECTRICA',
       costs: [
         { value: '3,40', extra: '- ricarica domestica', rating: 0.1 },
@@ -105,7 +105,8 @@ export default function Home() {
         kw: 110,
       },
       volume: '1395',
-      image: 'https://preview2.netcarshow.com/Volkswagen-Eco_Up-2013-hd.jpg',
+      image:
+        'https://t1-cms-3.images.toyota-europe.com/toyotaone/euen/toyota-prius-2019-gallery-17-full_tcm-11-1574546.jpg',
       fuel: 'FULL HYBRID',
       costs: [
         {
@@ -123,7 +124,8 @@ export default function Home() {
         kw: 110,
       },
       volume: '1395',
-      image: 'https://preview2.netcarshow.com/Volkswagen-Eco_Up-2013-hd.jpg',
+      image:
+        'https://www.auto-data.net/images/f79/Toyota-Prius-IV-XW50-facelift-2019.jpg',
       fuel: 'BENZINA',
       costs: [
         {

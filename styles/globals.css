@@ -3,7 +3,7 @@
 * {
   padding: 0;
   margin: 0;
-  line-height: 0.9;
+  line-height: 1.1;
   box-sizing: border-box;
   font-family: 'Work Sans', sans-serif;
 }
@@ -66,6 +66,46 @@ body {
   .menu__text {
     display: block;
   }
+
+  .modal {
+    padding: 2rem;
+  }
+
+  .modal-graphic {
+    padding-top: 4rem !important;
+    box-shadow: none !important;
+  }
+
+  .modal h1 {
+    display: none;
+  }
+
+  .cta-card {
+    margin: 1rem 0.4rem !important;
+  }
+
+  .modal .cta-card {
+    margin-top: 6rem !important;
+  }
+
+  .positioner {
+    left: -2.7rem !important;
+  }
+
+  .hero h1 {
+    font-size: 90px !important;
+  }
+
+  .kilometers {
+    font-size: 35px !important;
+    line-height: 0.8 !important;
+    font-weight: 300 !important;
+  }
+
+  .hero__cta button {
+    padding: 1rem 8rem !important;
+    font-weight: bold !important;
+  }
 }
 
 .hero {
@@ -84,7 +124,8 @@ body {
   align-items: center;
   justify-content: center;
   width: 90%;
-  margin-top: 90px;
+  gap: 1rem;
+  margin-top: 80px;
 }
 
 .hero__higlight {
@@ -97,11 +138,19 @@ body {
 }
 
 .hero__cta {
-  background-color: #33333315;
+  background-color: #cecece9a;
   padding: 1rem;
   text-align: center;
   flex: 3;
   width: 100%;
+}
+
+.hero__cta h2 {
+  font-weight: 500;
+  font-size: 18px;
+  margin: 1rem 0;
+  color: #333333;
+  text-transform: uppercase;
 }
 
 .hero__higlight p {
@@ -279,7 +328,7 @@ h1 {
   position: absolute;
   z-index: 1;
   width: 100%;
-  border-bottom: 4px solid;
+  border-bottom: 10px solid;
   border-bottom-color: inherit;
 }
 
@@ -288,6 +337,7 @@ h1 {
   display: flex;
   position: relative;
   background-color: #eee;
+  height: 10px;
   z-index: 0;
 }
 
@@ -297,19 +347,16 @@ h1 {
   border-right: 5px solid white;
 }
 
-.car__specs ul .filled {
-  border-bottom-color: inherit;
-}
-
 .car__specs span {
   color: #11111177;
-  font-size: 14px;
+  font-size: 14.5px;
   font-weight: 500;
 }
 
 .car__specs {
   position: relative;
   margin-top: 1rem;
+  font-size: 21px;
 }
 
 .car__specs .car__info {
@@ -355,6 +402,12 @@ h1 {
 @media screen and (max-width: 630px) {
   .car {
     flex-direction: column;
+  }
+
+  .kilometers {
+    line-height: 0.8;
+    font-size: 16px;
+    font-weight: 300;
   }
 }
 
@@ -490,7 +543,6 @@ main.container {
   background-color: #fff;
   width: 100%;
   max-width: 1000px;
-  padding: 2rem;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -529,21 +581,23 @@ main.container {
 }
 
 .modal-graphic {
-  border-radius: 20px;
-  background-color: #eeeeee;
-  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 25px #8d8d8d;
+  background-color: #bababa;
   display: flex;
+  margin: 2rem 0.5rem;
   flex-direction: column;
   align-items: center;
+  padding-top: 1rem;
 }
 
 .modal-graphic button {
-  color: #eee;
+  color: #cccccc;
   font-weight: 600;
 }
 
 .modal .cta-card {
-  margin-top: 9rem;
+  margin-top: 7rem;
 }
 
 .modal .cta-card::after {
@@ -552,9 +606,9 @@ main.container {
 
 .modal .positioner {
   position: absolute;
-  top: -6.95rem;
-  left: -2.1rem;
-  font-size: 40px;
+  top: -5.95rem;
+  left: -5rem;
+  font-size: 55px;
 }
 
 .modal .cta-card:nth-child(odd) .positioner {
@@ -571,12 +625,35 @@ main.container {
   }
 
   .modal .positioner {
-    left: -1.63rem;
+    left: -2.2rem;
   }
 
   .modal {
-    padding: 2rem 0;
-    height: 90vh;
+    height: 100vh;
+    width: 100vw !important;
+  }
+
+  .modal h1 {
+    margin: 0.5rem 0 0 1rem;
+  }
+
+  .modal-meta {
+    background-color: #eeeeee;
+    margin-top: 1rem;
+    padding: 1rem 0;
+    padding-bottom: 16rem;
+  }
+
+  .modal-graphic {
+    position: relative;
+    top: -16rem;
+    left: 50%;
+    transform: translateX(-55%);
+    width: 90%;
+  }
+
+  .backdrop {
+    background: transparent;
   }
 
   .logo {
@@ -645,11 +722,22 @@ main.container {
   color: white;
   position: sticky;
   bottom: 0;
+  align-items: center;
+}
+
+.mobile__filter svg {
+  font-size: 1.8rem;
 }
 
 .mobile__filter h2 {
   flex: 1;
   text-align: center;
+}
+
+@media screen and (min-width: 630px) {
+  .mobile__filter {
+    display: none;
+  }
 }
 
 /* FROM ISSA */

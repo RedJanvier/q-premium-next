@@ -5,6 +5,14 @@ import Modal from '../components/Modal';
 const CostModal = ({ closeModal, ctaData }) => {
   return (
     <Modal closeModal={closeModal}>
+      <h1>
+        <span>€x</span>
+        <span className='kilometers'>
+          100
+          <br />
+          KM
+        </span>
+      </h1>
       <div className='modal-meta'>
         <h2>Dove usi l’auto?</h2>
         <p>

@@ -10,7 +10,7 @@ const Modal = ({ children, closeModal }) => {
           onClick={closeModal}
           color='var(--primary-color)'
         />
-        <div className='modal__content'>{children}</div>
+        {children}
       </div>
     </div>
   );

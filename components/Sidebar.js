@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { FaChevronDown } from 'react-icons/fa';
+import { RiEqualizerFill } from 'react-icons/ri';
 import Filter from './icons/Filter';
 
 const Sidebar = ({ fuels, types, companies }) => {
@@ -13,7 +14,7 @@ const Sidebar = ({ fuels, types, companies }) => {
           padding: '2rem 0',
         }}
       >
-        <Filter size={34} color='var(--primary-color)' />
+        <RiEqualizerFill color='var(--primary-color)' />
         <span style={{ marginLeft: '10px' }}>Filtra Auto</span>
       </h2>
       <div className='filters'>
