@@ -106,6 +106,13 @@ body {
     padding: 1rem 8rem !important;
     font-weight: bold !important;
   }
+  .footer .socials {
+    margin-right: 0 !important;
+  }
+
+  .footer .flex .flex .appendix {
+    padding-top: 0 !important;
+  }
 }
 
 .hero {
@@ -378,6 +385,8 @@ h1 {
   width: 100%;
   min-width: 100px;
   max-width: 500px;
+  max-height: 202px;
+  overflow: hidden;
 }
 
 .car__image > div {
@@ -721,6 +730,7 @@ main.container {
   background-color: var(--primary-color);
   color: white;
   position: sticky;
+  width: 100vw;
   bottom: 0;
   align-items: center;
 }
@@ -739,8 +749,6 @@ main.container {
     display: none;
   }
 }
-
-/* FROM ISSA */
 
 .flex {
   display: flex;
@@ -768,6 +776,7 @@ main.container {
   padding: 2rem 1rem 4rem 1rem;
   background-color: rgb(52, 52, 53);
   color: white;
+  text-align: center;
 }
 
 .footer h2 {
@@ -793,6 +802,7 @@ main.container {
 @media screen and (max-width: 480px) {
   .flexDirection {
     flex-direction: column;
+    align-items: center;
   }
 
   .left {

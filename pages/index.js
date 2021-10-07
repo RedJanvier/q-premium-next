@@ -97,8 +97,8 @@ export default function Home() {
       ],
     },
     {
-      name: 'VOLKSWAGEN ECO UP!',
-      model: 'move 5 porte',
+      name: 'TOYOTA Prius 4ª',
+      model: 'serie 1.8 AWD Lounge',
       type: 'Berlina',
       force: {
         cv: 150,
@@ -116,8 +116,8 @@ export default function Home() {
       ],
     },
     {
-      name: 'VOLKSWAGEN ECO UP!',
-      model: 'move 5 porte',
+      name: 'TOYOTA AYGO',
+      model: '1.0 VVT-i 72 CV 5p.',
       type: 'Berlina',
       force: {
         cv: 150,
@@ -261,12 +261,11 @@ export default function Home() {
         <CostModal closeModal={() => setShowModal(false)} ctaData={ctaData} />
       )}
 
-      <Footer />
       <div className='mobile__filter'>
         <RiEqualizerFill />
-        {/* <Filter color='white' size={34} /> */}
         <h2>Filtra auto</h2>
       </div>
+      <Footer />
     </>
   );
 }
